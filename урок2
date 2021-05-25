@@ -1,0 +1,123 @@
+// Задание№1
+
+var a = 1, b = 1, c, d;
+c = ++a; alert(c);           // 2, число сначало увеличивается, потом выводится.
+d = b++; alert(d);           // 1, число выводится которое было, после этой операции оно увличивается на 1.
+c = (2 + ++a); alert(c);      // 5, сложение с числом 3, тк а=2+1 (преинкремента).
+d = (2 + b++); alert(d);      // 4, сложение с числом 2, тк b=2, и только после увеличится на 1. 
+alert(a);                    // 3, увеличились два раза.
+alert(b);                    // 3, увеличились два раза.
+
+
+// Задание№2
+
+var a2 = 2;
+var x = 1 + (a2 *= 2); // 5, х = 1 + (2 * 2)
+
+alert(x)
+
+
+//Задание№3
+
+var a3 = prompt('Введите первое число');
+var b3 = prompt('Введите второе число');
+
+if (a3 >= 0 && b3 >= 0) {
+    alert('Оба числа положительные \n Их разность: ' + (a3 - b3));
+} else if (a3 < 0 && b3 < 0) {
+    alert('Оба числа отрицательные \n Их произведение: ' + (a3 * b3));
+} else {
+    alert('Числа разных знаков \n Их сумма: ' + (a3 + b3));
+}
+
+
+//Задание№4
+
+var a4 = prompt('Введите значение a в диапозоне от 0 до 15 включительно:');
+if (!isNaN(a4)) {
+    switch (a4) {
+        case 1:
+            alert(a4++);
+        case 2:
+            alert(a4++);
+        case 3:
+            alert(a4++);
+        case 4:
+            alert(a4++);
+        case 5:
+            alert(a4++);
+        case 6:
+            alert(a4++);
+        case 7:
+            alert(a4++);
+        case 8:
+            alert(a4++);
+        case 9:
+            alert(a4++);
+        case 10:
+            alert(a4++);
+        case 11:
+            alert(a4++);
+        case 12:
+            alert(a4++);
+        case 13:
+            alert(a4++);
+        case 14:
+            alert(a4++);
+        case 15:
+            alert(a4);
+            break;
+    }
+} else {
+    alert('Введено некорректное значение');
+}
+
+
+//Задание№5
+
+function p1(n1, n2) {
+    return n1 + n2;
+}
+
+function p2(n1, n2) {
+    return n1 - n2;
+}
+
+function p3(n1, n2) {
+    return n1 * n2;
+}
+
+function p4(n1, n2) {
+    return n1 / n2;
+}
+
+
+//Задание№6
+
+function mathOperation(a6, b6, operation) {
+    switch (operation) {
+        case 'p1':
+            return p1(a6, b6);
+        case 'p2':
+            return p2(a6, b6);
+        case 'p3':
+            return p3(a6, b6);
+        case 'p4':
+            return p4(a6, b6);
+    }
+}
+
+var a6 = parseInt(prompt('Введите первое число'));
+var b6 = parseInt(prompt('Введите второе число'));
+var operation = prompt('Введите операцию: p1, p2, p3, p4');
+
+if (!isNaN(a6) && !isNaN(b6) && !isNaN(operation == 'p1' || operation == 'p2' || operation == 'p3' || operation == 'p4')) {
+    if (operation == 'p1')
+        alert('Их сумма: ' + mathOperation(a6, b6, operation));
+    if (operation == 'p2')
+        alert('Их разность: ' + mathOperation(a6, b6, operation));
+    if (operation == 'p3')
+        alert('Их произведение: ' + mathOperation(a6, b6, operation));
+    if (operation == 'p4')
+        alert('Их частное: ' + mathOperation(a6, b6, operation));
+} else alert('Некорректное значение');
