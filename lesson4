@@ -1,0 +1,49 @@
+//Задание1
+var number = parseInt(promt('Введите 3-х значное число: '));
+function getResult(num) {
+    var DIGITSPROPS = ['ones', 'tens', 'hundreds'];
+
+    if (number <= 999 && number >= 0) {
+        let numbers = {};
+        for (var i = 0; i < 3; i++) {
+            numbers[DIGITSPROPS[i]] = num % 10;
+            num = Math.floor(num / 10);
+        }
+        return numbers;
+    } else {
+        console.log(number = {})
+    }
+}
+
+console.log(getResult(number));
+
+
+//Задание2
+var basket = [
+    {
+        name: 'trousers',
+        price: 10,
+        color: 'black',
+        amount: 1,
+        getPrice: function (discount) {
+            return this.price * (1 - (discount * 2 || 0));
+        }
+    },
+    {
+        name: 'shirts',
+        price: 20,
+        color: 'blue',
+        amount: 2,
+        getPrice: function (discount) {
+            return this.price * (1 - (discount ? discount : 0));
+        }
+    }
+]
+
+function getResult() {
+    var basketSum = 0;
+    for (var i = 0; i < basket.length; i++) {
+        basketSum += basket[i].getPrice(0.1) * basket[i].amount;
+    }
+}
+getResult();
