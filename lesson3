@@ -1,0 +1,77 @@
+//Задание1
+var i = 2;
+
+while (i < 100) {
+    var j = 2;
+    var isPime = true;
+    while (j < i) {
+        if (i % j === 0) {
+            isPrame = false;
+        }
+        j++;
+    }
+    if (isPrime === true) {
+        console.log(i);
+    }
+    i++;
+}
+//попробовал реализовать без масива, но почему то не работает.
+
+
+
+var i = 2;
+var max = 100;
+var primes = [];
+
+while (i < max) {
+    var j = 2;
+    var isPime = true;
+    while (j < i) {
+        if (i % j === 0) {
+            isPime = false;
+        }
+        j++;
+    }
+    if (isPime === true) {
+        primes.push(i);
+    }
+    i++;
+}
+console.log(primes);
+
+
+//Задание2,3
+var productNames = ['trousers', 'shirts', 'boots', 'headdress'];
+var basket = [10, 20, 30, 40];
+
+function countBasketPrice() {
+    var basketSum = 0;
+    for (var i = 0; i < basket.length; i++) {
+        basketSum += basket[i];
+    }
+    return basketSum;
+}
+countBasketPrice();
+
+// вариант№2
+var productNames = ['trousers', 'shirts', 'boots', 'headdress']; //название товаров
+var basket = [10, 20, 30, 40]; //сумма товаров
+var basketAmount = [1, 2, 3, 4]; //количество товаров
+/* или var basket = [['trousers', 10, 1], ['shirts', 20, 2], ['boots', 30, 3], ['headdress', 40, 4]; */
+
+function countBasketPrice() {
+    var basketSum = 0;
+    for (var i = 0; i < basket.length; i++) {
+        basketSum += basket[i] * basketAmount[i];
+        /* или basketSum += basket[i][1] * basket[i][2]; */
+    }
+    return basketSum;
+}
+countBasketPrice();
+
+//Задание4
+for (var i4 = 0; i4 < 10; i4++) {
+    {
+
+    } console.log(i4)
+}
